@@ -1,0 +1,60 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
+
+public class LoginForm extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField txtName;
+	private JPasswordField txtPass;
+	public LoginForm() {
+		setTitle("FORM ĐĂNG NHẬP");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Form Đăng Nhập");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel.setBounds(146, 11, 183, 42);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblTnngNhp = new JLabel("Tên Đăng Nhập");
+		lblTnngNhp.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblTnngNhp.setBounds(36, 96, 119, 42);
+		contentPane.add(lblTnngNhp);
+		
+		txtName = new JTextField();
+		txtName.setBounds(165, 96, 152, 31);
+		contentPane.add(txtName);
+		txtName.setColumns(10);
+		
+		JLabel lblMtKhu = new JLabel("Mật Khẩu");
+		lblMtKhu.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblMtKhu.setBounds(46, 149, 119, 42);
+		contentPane.add(lblMtKhu);
+		
+		txtPass = new JPasswordField();
+		txtPass.setBounds(165, 151, 148, 31);
+		contentPane.add(txtPass);
+		
+		JButton btnLogin = new JButton("Đăng Nhập");
+		btnLogin.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnLogin.setBounds(178, 219, 101, 31);
+		contentPane.add(btnLogin);
+	}
+}

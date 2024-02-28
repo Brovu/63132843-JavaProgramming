@@ -1,0 +1,108 @@
+package view;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class TinhToan extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JTextField txtA;
+	private JTextField txtB;
+	private JTextField txtC;
+	private JTextField txtX1;
+	private JTextField txtX2;
+	private JTextField txtSoNghiem;
+
+	public TinhToan() {
+		setTitle("TÍNH PTB2");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Giải Phương Trình Bậc 2");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel.setBounds(123, 11, 206, 14);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Số a");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel_1.setBounds(30, 82, 58, 14);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("Số b");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel_1_1.setBounds(30, 111, 58, 14);
+		contentPane.add(lblNewLabel_1_1);
+		
+		JLabel lblNewLabel_1_2 = new JLabel("Số c");
+		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel_1_2.setBounds(30, 138, 58, 14);
+		contentPane.add(lblNewLabel_1_2);
+		
+		txtA = new JTextField();
+		txtA.setBounds(76, 82, 67, 20);
+		contentPane.add(txtA);
+		txtA.setColumns(10);
+		
+		txtB = new JTextField();
+		txtB.setColumns(10);
+		txtB.setBounds(76, 111, 67, 20);
+		contentPane.add(txtB);
+		
+		txtC = new JTextField();
+		txtC.setColumns(10);
+		txtC.setBounds(76, 136, 67, 20);
+		contentPane.add(txtC);
+		
+		JButton btnGiai = new JButton("Giải");
+		btnGiai.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		btnGiai.setBounds(309, 110, 58, 23);
+		contentPane.add(btnGiai);
+		
+		txtX1 = new JTextField();
+		txtX1.setEditable(false);
+		txtX1.setColumns(10);
+		txtX1.setBounds(324, 194, 67, 20);
+		contentPane.add(txtX1);
+		
+		txtX2 = new JTextField();
+		txtX2.setEditable(false);
+		txtX2.setColumns(10);
+		txtX2.setBounds(324, 230, 67, 20);
+		contentPane.add(txtX2);
+		
+		JLabel lblNewLabel_2 = new JLabel("X1");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel_2.setBounds(270, 194, 46, 14);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_2_1 = new JLabel("X2");
+		lblNewLabel_2_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel_2_1.setBounds(270, 233, 46, 14);
+		contentPane.add(lblNewLabel_2_1);
+		
+		JLabel lblNewLabel_3 = new JLabel("Phương Trình");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_3.setBounds(10, 219, 92, 14);
+		contentPane.add(lblNewLabel_3);
+		
+		txtSoNghiem = new JTextField();
+		txtSoNghiem.setEditable(false);
+		txtSoNghiem.setColumns(10);
+		txtSoNghiem.setBounds(105, 218, 128, 20);
+		contentPane.add(txtSoNghiem);
+	}
+
+}
